@@ -17,9 +17,6 @@ configurations {
     onlyRunTime
 }
 
-def explodedWebAppDir = "$buildDir/explodedWebApp"
-def mergePropsDir = "$buildDir/props"
-
 dependencies {
     implementation (project(":dbmodel")) {transitive = false}
     implementation group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
@@ -29,38 +26,9 @@ dependencies {
     onlyRunTime group: 'org.intermine', name: 'bluegenes', version: System.getProperty("blueGenesVersion")
 }
 
-war {
-    dependsOn 'mergeProperties', 'summariseObjectStore', 'unwarBioWebApp', 'addStrutsConfig'
-    finalizedBy 'warWebApp'
-}
-
-// intermine-webtasks depends on the intermine-webapp artifact itself, which Gradle resolves to its war (12 MB)
-// next to the classes jar this build asks for; Tomcat ignores a war inside WEB-INF/lib
-tasks.withType(War).configureEach {
-    classpath = classpath.filter { !it.name.endsWith('.war') }
-}
-
-// build/explodedWebApp holds the unpacked bio-webapp war with the struts, tiles and web.xml additions (unwarBioWebApp,
-// addStrutsConfig). A War task also takes src/main/webapp, and it is listed first, so with EXCLUDE the mine's own files
-// win over the bio-webapp ones. (A Copy task from src/main/webapp into explodedWebApp, as this build had, empties the
-// directory on a first run in Gradle 8: the war then lacks everything the bio-webapp war supplies.)
-task warWebApp(type: War) {
-    description = "Create the war from the build/explodedWebAppDir directory"
-    from "${explodedWebAppDir}"
-    exclude "WEB-INF/web.properties"
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    webInf { from "${mergePropsDir}" }
-}
-
 // read in mine.properties to get the contextPath
 def props = new Properties()
 file(minePropertyFile).withInputStream { props.load(it) }
-
-// The plugin's mergeProperties reads intermine.properties from build/resources/main, which processResources writes
-// (copyMineProperties only puts the file in the directory that processResources copies from).
-tasks.named('mergeProperties') {
-    inputs.files(tasks.named('processResources'))
-}
 
 webappConfig {
     mineName = "humanmine"
@@ -68,7 +36,6 @@ webappConfig {
     userProfileObjectStoreName = "os.userprofile-production"
     userProfileObjectStoreWriterName = "osw.userprofile-production"
     defaultInterminePropertiesFile = "default.intermine.production.properties"
-    propsDir = "$mergePropsDir"
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
