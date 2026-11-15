@@ -15,11 +15,11 @@ sourceSets {
 }
 
 dependencies {
-    compile group: "org.intermine", name: "intermine-integrate", version: System.getProperty("imVersion")
-    compile group: "org.intermine", name: "intermine-resources", version: System.getProperty("imVersion") // for log4j
+    implementation group: "org.intermine", name: "intermine-integrate", version: System.getProperty("imVersion")
+    implementation group: "org.intermine", name: "intermine-resources", version: System.getProperty("imVersion") // for log4j
     bioModel group: "org.intermine", name: "bio-model", version: System.getProperty("bioVersion"), transitive: false
-    compile group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
-    compile fileTree(dir: 'libs', include: '*.jar')
+    implementation group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
+    implementation fileTree(dir: 'libs', include: '*.jar')
 }
 
 dbModelConfig {
@@ -29,8 +29,8 @@ dbModelConfig {
     defaultInterminePropertiesFile = "default.intermine.production.properties"
     userProfileObjectStoreName = "os.userprofile-production"
     userProfileModelName = "userprofile"
-    soTermListFilePath = "dbmodel/resources/so_terms"
-    soAdditionFilePath = "dbmodel/build/so_additions.xml"
+    soTermListFilePath = "$rootDir/dbmodel/resources/so_terms"
+    soAdditionFilePath = "$rootDir/dbmodel/build/so_additions.xml"
 }
 
 mineDBModelConfig {

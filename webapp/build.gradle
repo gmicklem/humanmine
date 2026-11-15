@@ -1,5 +1,4 @@
 apply plugin: "war"
-apply from: "https://raw.githubusercontent.com/akhikhl/gretty/master/pluginScripts/gretty.plugin"
 apply plugin: "webapp"
 apply plugin: "com.bmuschko.cargo"
 
@@ -22,11 +21,11 @@ def explodedWebAppDir = "$buildDir/explodedWebApp"
 def mergePropsDir = "$buildDir/props"
 
 dependencies {
-    compile (project(":dbmodel")) {transitive = false}
-    compile group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
-    compile group: "org.intermine", name: "intermine-api", version: System.getProperty("imVersion")
-    compile group: "org.intermine", name: "intermine-webapp", version: System.getProperty("imVersion"), classifier: "classes"
-    compile group: "org.intermine", name: "intermine-webtasks", version: System.getProperty("imVersion")
+    implementation (project(":dbmodel")) {transitive = false}
+    implementation group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
+    implementation group: "org.intermine", name: "intermine-api", version: System.getProperty("imVersion")
+    implementation group: "org.intermine", name: "intermine-webapp", version: System.getProperty("imVersion"), classifier: "classes"
+    implementation group: "org.intermine", name: "intermine-webtasks", version: System.getProperty("imVersion")
     onlyRunTime group: 'org.intermine', name: 'bluegenes', version: System.getProperty("blueGenesVersion")
 }
 
@@ -35,26 +34,32 @@ war {
     finalizedBy 'warWebApp'
 }
 
-task warWebApp(type: War) {
-    dependsOn 'copyWebappContent'
-    description "Create the war from the build/explodedWebAppDir directory"
-    from "${explodedWebAppDir}"
-    exclude "WEB-INF/web.properties"
-    webInf { from "${mergePropsDir}" }
+// intermine-webtasks depends on the intermine-webapp artifact itself, which Gradle resolves to its war (12 MB)
+// next to the classes jar this build asks for; Tomcat ignores a war inside WEB-INF/lib
+tasks.withType(War).configureEach {
+    classpath = classpath.filter { !it.name.endsWith('.war') }
 }
 
-task copyWebappContent(type: Copy) {
-    from "src/main/webapp/"
-    into "${explodedWebAppDir}"
+// build/explodedWebApp holds the unpacked bio-webapp war with the struts, tiles and web.xml additions (unwarBioWebApp,
+// addStrutsConfig). A War task also takes src/main/webapp, and it is listed first, so with EXCLUDE the mine's own files
+// win over the bio-webapp ones. (A Copy task from src/main/webapp into explodedWebApp, as this build had, empties the
+// directory on a first run in Gradle 8: the war then lacks everything the bio-webapp war supplies.)
+task warWebApp(type: War) {
+    description = "Create the war from the build/explodedWebAppDir directory"
+    from "${explodedWebAppDir}"
+    exclude "WEB-INF/web.properties"
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    webInf { from "${mergePropsDir}" }
 }
 
 // read in mine.properties to get the contextPath
 def props = new Properties()
 file(minePropertyFile).withInputStream { props.load(it) }
 
-gretty {
-    jvmArgs = ['-Dorg.apache.el.parser.SKIP_IDENTIFIER_CHECK=true']
-    contextPath = props.getProperty("webapp.path")
+// The plugin's mergeProperties reads intermine.properties from build/resources/main, which processResources writes
+// (copyMineProperties only puts the file in the directory that processResources copies from).
+tasks.named('mergeProperties') {
+    inputs.files(tasks.named('processResources'))
 }
 
 webappConfig {
@@ -124,7 +129,7 @@ String getServerName(String deployUrl) {
 
 task blueGenesStart(type: JavaExec) {
     classpath = configurations.onlyRunTime
-    main = "bluegenes.core"
+    mainClass = "bluegenes.core"
     //println "Loading blue genes for '" + props.getProperty("project.title") + "' at '" + props.getProperty("webapp.baseurl") + "/" + props.getProperty("webapp.path") + "'"
 
     //:bluegenes-default-service-root "http://beta.flymine.org/beta"
