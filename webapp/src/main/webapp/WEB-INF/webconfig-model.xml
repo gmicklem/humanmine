@@ -617,18 +617,6 @@
                                        GWASResults.study.publication.journal, GWASResults.study.publication.year, GWASResults.study.publication.pubMedId"
                                  externalLink="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids="/>
 
-<!--
-
-    <enrichmentwidgetdisplayer id="gwas_enrichment" title="GWAS Phenotype Enrichment"
-        link="org.intermine.bio.web.widget.GWASEnrichmentURLQuery"
-        dataSetLoader="org.intermine.bio.web.widget.GWASEnrichmentLdr"
-        label="Phenotype"
-        description="Phenotypes enriched for SNPs in this list."
-        typeClass="SNP"
-        style="height:310px;"
-    />
--->
-
       <enrichmentwidgetdisplayer id="pathway_enrichment"
                                  title="Pathway Enrichment"
                                  description="Pathways enriched for genes in this list - data from KEGG and Reactome"
@@ -644,13 +632,6 @@
                                  views="secondaryIdentifier, symbol, organism.name,
                                         pathways.identifier, pathways.name, pathways.dataSets.name"/>
 
-    <!--<bagtabledisplayer id="orthologues" title="Orthologues" pathStrings="Gene.homologues[type=orthologue].homologue.organism"
-        link="org.intermine.bio.web.widget.HomologueURLQuery"
-        description="Counts of orthologues in other organisms for the genes in this list."
-        displayFields="name"
-        exportField="primaryIdentifier"
-        typeClass="Gene"
-        columnTitle="Orthologues"/>-->
      <bagtabledisplayer id="interactions" title="Interactions"
                         pathStrings="Gene.interactions.participant2"
                         description="Genes (from the list or not) that interact with genes in this list.  Counts may include the same interaction more than once if observed in multiple experiments."
