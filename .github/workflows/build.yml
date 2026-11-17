@@ -1,0 +1,187 @@
+name: HumanMine build
+
+on:
+  push:
+    branches:
+      - maint-2026
+      - 'maint/**'
+  pull_request:
+  workflow_dispatch:
+
+# One run per pull request (or per branch): a new push cancels the run in progress.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+# Until InterMine 6.0.0 is on Maven Central (this mine's imVersion and bioVersion are 6.0.+), the job builds the
+# maint-2026 branch of gmicklem/intermine itself (the "InterMine" steps below) and the build here resolves
+# org.intermine:*:6.0.+ from the runner's ~/.m2 (mavenLocal()). The mine's own data sources (version 4.3.0 in
+# project.xml) are not on Maven Central at all: they are built from gmicklem/humanmine-bio-sources (the BIO_SOURCES_REF branch).
+# After the 6.0.0 release delete the "Check out InterMine", cache and "Install InterMine" steps and the Python step;
+# the bio-sources steps stay as long as the sources are not published.
+env:
+  INTERMINE_REF: maint-2026
+  BIO_SOURCES_REPO: gmicklem/humanmine-bio-sources
+  BIO_SOURCES_REF: maint-2026
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # cold: InterMine install ~15-25 min + the bio sources + this build; warm (cache hits): a few minutes
+    timeout-minutes: 60
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
+        cache: gradle
+    # Python 3.10+ is for InterMine's config/lib/install_intermine.py (dataclasses, glob(root_dir=)) only: this repository's
+    # build does not use Python
+    - name: Set up Python 3
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    # Build InterMine: check out the pinned branch into ./intermine (inside the workspace: checkout cannot go above it)
+    - name: Check out InterMine ${{ env.INTERMINE_REF }}
+      uses: actions/checkout@v4
+      with:
+        repository: gmicklem/intermine
+        ref: ${{ env.INTERMINE_REF }}
+        path: intermine
+    - name: Resolve the InterMine commit
+      id: im
+      run: echo "sha=$(git -C intermine rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+    # The key has the ref and the exact commit, so a moved branch rebuilds; restore-keys start from the last build of the
+    # ref (the install republishes 6.0.0 over it, and the Gradle caches are reused)
+    - name: Restore the InterMine build cache
+      id: im-cache
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ~/.m2/repository/org/intermine
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: intermine-${{ runner.os }}-jdk17-${{ env.INTERMINE_REF }}-${{ steps.im.outputs.sha }}
+        restore-keys: |
+          intermine-${{ runner.os }}-jdk17-${{ env.INTERMINE_REF }}-
+    # install_intermine.py writes the gradle.properties and gradle-wrapper.properties of the InterMine builds and runs
+    # `./gradlew publishToMavenLocal` in plugin, intermine, bio, bio/sources and bio/postprocess, in that order. It needs no
+    # database: that task builds and publishes jars without running the tests. The PSQL_* variables are only substituted
+    # into the ~/.intermine/*.properties files the script copies; this mine does not read them.
+    - name: Install InterMine ${{ env.INTERMINE_REF }} into ~/.m2
+      if: steps.im-cache.outputs.cache-hit != 'true'
+      working-directory: intermine
+      env:
+        PSQL_HOST: localhost
+        PSQL_USER: test
+        PSQL_PWD: test
+      run: python3 -I config/lib/install_intermine.py
+    # Saved here, not at the end of the job, so that a failing build of this repository keeps the InterMine build
+    - name: Save the InterMine build cache
+      if: steps.im-cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: |
+          ~/.m2/repository/org/intermine
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: intermine-${{ runner.os }}-jdk17-${{ env.INTERMINE_REF }}-${{ steps.im.outputs.sha }}
+    # The jars of the mine's own sources (org.intermine:bio-source-<type>:4.3.0): without them the build stops in
+    # :dbmodel:generateKeys with "Could not find org.intermine:bio-source-...". `install` is `publishToMavenLocal` there.
+    - name: Check out ${{ env.BIO_SOURCES_REPO }} ${{ env.BIO_SOURCES_REF }}
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ env.BIO_SOURCES_REPO }}
+        ref: ${{ env.BIO_SOURCES_REF }}
+        path: bio-sources
+    - name: Resolve the bio sources commit
+      id: bs
+      run: echo "sha=$(git -C bio-sources rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+    # Keyed on both commits: the jars are compiled against the InterMine of the same run. Restored after the InterMine cache,
+    # so its bio-source-* directories (the InterMine ones are in it as well, unchanged) win.
+    - name: Restore the bio sources build cache
+      id: bs-cache
+      uses: actions/cache/restore@v4
+      with:
+        path: ~/.m2/repository/org/intermine/bio-source-*
+        key: bio-sources-${{ runner.os }}-jdk17-${{ steps.im.outputs.sha }}-${{ steps.bs.outputs.sha }}
+    - name: Install the bio sources into ~/.m2
+      if: steps.bs-cache.outputs.cache-hit != 'true'
+      working-directory: bio-sources
+      run: ./gradlew install --stacktrace
+    - name: Save the bio sources build cache
+      if: steps.bs-cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: ~/.m2/repository/org/intermine/bio-source-*
+        key: bio-sources-${{ runner.os }}-jdk17-${{ steps.im.outputs.sha }}-${{ steps.bs.outputs.sha }}
+    # The runner's own PostgreSQL (not a service container: the build connects to localhost:5432, as in the bio-sources CI).
+    # test owns the databases: PostgreSQL 15+ no longer lets other roles create in schema public. buildDB needs the
+    # production database to exist, empty.
+    - name: Start PostgreSQL and create the databases
+      run: |
+        sudo systemctl start postgresql.service || sudo service postgresql start
+        sudo -u postgres createuser test
+        sudo -u postgres psql -c "alter user test with encrypted password 'test';"
+        for db in humanmine-production humanmine-userprofile humanmine-items; do
+          sudo -u postgres createdb -O test "$db"
+        done
+    # ~/.intermine/humanmine.properties is read by the root build.gradle (mineName) and is not in the repository. These are the
+    # keys the build reads (see docs/UPGRADING-build.md in InterMine); no data is loaded and nothing is deployed.
+    - name: Write the mine properties
+      run: |
+        mkdir -p "$HOME/.intermine"
+        cat > "$HOME/.intermine/humanmine.properties" <<'PROPS'
+        db.production=psql
+        db.production.datasource.serverName=localhost
+        db.production.datasource.databaseName=humanmine-production
+        db.production.datasource.user=test
+        db.production.datasource.password=test
+
+        db.common-tgt-items=psql
+        db.common-tgt-items.datasource.serverName=localhost
+        db.common-tgt-items.datasource.databaseName=humanmine-items
+        db.common-tgt-items.datasource.user=test
+        db.common-tgt-items.datasource.password=test
+
+        db.userprofile-production=psql
+        db.userprofile-production.datasource.serverName=localhost
+        db.userprofile-production.datasource.databaseName=humanmine-userprofile
+        db.userprofile-production.datasource.user=test
+        db.userprofile-production.datasource.password=test
+
+        webapp.baseurl=http://localhost:8080
+        webapp.path=humanmine
+        webapp.deploy.url=http://localhost:8080
+        webapp.manager=manager
+        webapp.password=manager
+        project.title=HumanMine CI
+        superuser.account=superuser@intermine.org
+        superuser.initialPassword=intermine
+        PROPS
+    # The deepest target that needs no data: the data model (merged from the sources' additions files, the Java classes
+    # generated from it, the dbmodel jar), the production database tables, and the war. integrate and postprocess need the
+    # source data and are not run.
+    - name: Build the data model and the production database
+      run: ./gradlew --warning-mode all --stacktrace :dbmodel:build :dbmodel:buildDB
+    - name: Build the war
+      run: ./gradlew --warning-mode all --stacktrace :webapp:war
+    # Step 8 of docs/UPGRADING-build.md in InterMine: the bio-webapp content is in the war (an earlier plugin lost it without a
+    # message). A library that is in the war twice is a warning only: the war of the maint-2026 plugin has commons-logging 1.2
+    # (from the POMs of this mine's own bio sources) next to 1.3.5 (InterMine's), a known difference of the sources' POMs.
+    - name: Check the war
+      run: |
+        war=webapp/build/libs/webapp.war
+        ls -l "$war"
+        unzip -Z1 "$war" | grep -E '^WEB-INF/(web.xml|struts-config.xml|tiles-defs.xml|aspects.xml|webconfig-model.xml)$' | sort | tee "$RUNNER_TEMP/found.txt"
+        test "$(wc -l < "$RUNNER_TEMP/found.txt")" -eq 5
+        dup=$(unzip -Z1 "$war" | grep '^WEB-INF/lib/' | sed -E 's#WEB-INF/lib/##; s/-[0-9][0-9A-Za-z._-]*\.jar$//' | sort | uniq -d | tr '\n' ' ')
+        if [ -n "$dup" ]; then echo "::warning::libraries in the war more than once: $dup"; fi
+        lang2=$(unzip -Z1 "$war" | grep -c 'commons-lang-2' || true)
+        if [ "$lang2" -ne 0 ]; then echo "commons-lang 2 is in the war"; exit 1; fi
