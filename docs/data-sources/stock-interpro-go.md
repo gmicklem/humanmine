@@ -7,12 +7,13 @@
 | Data source | InterPro ([home page](https://www.ebi.ac.uk/interpro/)) |
 | Loader | [intermine `bio/sources/interpro-go`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/interpro-go) at 5351d0c301 (InterproGoConverter); source type `interpro-go` |
 | Data sets in the mine | InterPro domain GO annotations |
-| Licence | not verified |
-| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
-| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/interpro/current_release/interpro2go> |
+| Licence | CC0-1.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://interpro-documentation.readthedocs.io/en/latest/license.html> |
 | Licence read on | 2026-11-18 (UTC) |
-| Conditions | - Looked at: the file's header (date, description, citation, contact; no licence), release_notes.txt and the FTP listings of ftp.ebi.ac.uk/pub/databases/interpro/: no licence text. <br> - InterPro's licence page (https://www.ebi.ac.uk/interpro/about/) is a JavaScript page: fetched, it holds no text. This is not a blocked host; the page needs a browser. The earlier record (CC0) is not confirmed. <br> - EMBL-EBI terms of use apply meanwhile (https://www.ebi.ac.uk/about/terms-of-use/). |
-| Redistributable | yes: Unverified (3 MB mapping file, used whole). Flag kept; read the page in a browser before publishing. |
+| Licence wording | "All of the InterPro, Pfam, PRINTS and SFLD downloadable data provided on the InterPro website is freely available under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication." |
+| Conditions | - "You do not need a special license for commercial use but please cite the resource and relevant individual member databases and keep the Copyright statement with your installation." (a request; CC0 imposes none). <br> - The interpro2go file (ftp.ebi.ac.uk/pub/databases/interpro/current_release/interpro2go) has no licence line of its own; the statement is on the InterPro documentation page. InterPro's own web page (https://www.ebi.ac.uk/interpro/about/license/) loads in a browser with no licence text. |
+| Redistributable | yes: CC0 allows redistribution without conditions. |
 | Download (interpro2go) | <https://ftp.ebi.ac.uk/pub/databases/interpro/current_release/interpro2go> |
 
 ## This build

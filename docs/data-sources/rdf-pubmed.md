@@ -15,7 +15,7 @@
 | Licence read on | 2026-11-18 (UTC) |
 | Licence wording | "NLM freely provides PubMed data. Please note some abstracts may be protected by copyright." |
 | Conditions | - Acknowledge NLM as the source "in a clear and conspicuous manner". <br> - Do not use the PubMed wordmark or logo, and do not imply NLM/NIH/HHS endorsement. <br> - Anyone who republishes or redistributes the data must maintain the most current version, or make known in a clear and conspicuous manner that the product does not reflect the most current data from NLM. <br> - Some abstracts may be copyrighted; NLM gives no legal advice on that. |
-| Licence (RDF Portal) | https://www.nlm.nih.gov/databases/download.html (on <https://rdfportal.org/dataset/pubmed/>). RDF Portal's page gives NLM's download page (blocked here) as the licence; the FTP README is the same terms. |
+| Licence (RDF Portal) | https://www.nlm.nih.gov/databases/download.html (on <https://rdfportal.org/dataset/pubmed/>). RDF Portal's page gives NLM's download page as the licence; read 2026-11-18 (https://www.nlm.nih.gov/databases/download.html): the same NLM Terms and Conditions as the FTP README, "acknowledge NLM as the source of the data in a clear and conspicuous manner". |
 | Redistributable | yes: Redistribution is allowed on those conditions (the currency notice matters for a frozen cache); abstract copyright is a separate question. |
 
 ## This build

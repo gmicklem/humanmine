@@ -7,13 +7,13 @@
 | Data source | NCBI ([home page](https://www.ncbi.nlm.nih.gov)) |
 | Loader | [intermine `bio/sources/ncbi-gff`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/ncbi-gff) at 5351d0c301 (NcbiGffGFF3RecordHandler, NcbiGffGFF3SeqHandler, GFF3Converter, GFF3RecordHandler, GFF3SeqHandler, GFF3Record, GFF3ConverterTask); source type `ncbi-gff` |
 | Data sets in the mine | ncbi-gff |
-| Licence | NCBI FTP notice: unrestricted public data (no licence named) |
-| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
-| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/README.ftp> |
+| Licence | No restrictions by NCBI (NCBI data-use policy; no licence named) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.ncbi.nlm.nih.gov/home/about/policies/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "NOTE: ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
-| Conditions | - The notice names no licence and asks for no attribution. NCBI's own data-use policy page (https://www.ncbi.nlm.nih.gov/home/about/policies/) is on a host the sandbox blocks, so its wording on attribution and on third-party rights in some records was not read. |
-| Redistributable | yes: The server notice says the data are unrestricted; the policy page was not readable. |
+| Licence wording | "NCBI itself places no restrictions on the use or distribution of the data contained therein." |
+| Conditions | - No licence is named and NCBI asks for no attribution for the data. The policy (Molecular Data Usage) adds: "some submitters of the original data (or the country of origin of such data) may claim patent, copyright, or other intellectual property rights in all or a portion of the data"; NCBI "cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases". <br> - For NCBI's own web pages (public domain): "it is requested that in any subsequent use of this work, NLM be given appropriate acknowledgment". Giving that acknowledgement is cheap and the notice files do it. <br> - The server notice (https://ftp.ncbi.nlm.nih.gov/README.ftp) agrees: "ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
+| Redistributable | yes: NCBI places no restrictions on use or distribution of its molecular data; third-party claims on single records are the submitters' (NCBI cannot grant them). |
 | Download (gff) | <https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_genomic.gff.gz> |
 
 ## This build

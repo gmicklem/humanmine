@@ -9,14 +9,14 @@
 | Data set in the mine | NCBI Gene (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/ncbi/sparql> |
 | Graphs | http://rdfportal.org/dataset/ncbigene |
-| Licence (upstream) | NCBI FTP notice: unrestricted public data (no licence named) |
-| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
-| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/README.ftp> |
+| Licence (upstream) | No restrictions by NCBI (NCBI data-use policy; no licence named) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.ncbi.nlm.nih.gov/home/about/policies/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "NOTE: ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
-| Conditions | - The notice names no licence and asks for no attribution. NCBI's own data-use policy page (https://www.ncbi.nlm.nih.gov/home/about/policies/) is on a host the sandbox blocks, so its wording on attribution and on third-party rights in some records was not read. |
-| Licence (RDF Portal) | https://www.ncbi.nlm.nih.gov/home/about/policies/ (on <https://rdfportal.org/dataset/ncbigene/>). RDF Portal's page gives a URL (NCBI's policies page, which is blocked here), not a licence name. |
-| Redistributable | yes: The server notice says the data are unrestricted; the policy page was not readable. |
+| Licence wording | "NCBI itself places no restrictions on the use or distribution of the data contained therein." |
+| Conditions | - No licence is named and NCBI asks for no attribution for the data. The policy (Molecular Data Usage) adds: "some submitters of the original data (or the country of origin of such data) may claim patent, copyright, or other intellectual property rights in all or a portion of the data"; NCBI "cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases". <br> - For NCBI's own web pages (public domain): "it is requested that in any subsequent use of this work, NLM be given appropriate acknowledgment". Giving that acknowledgement is cheap and the notice files do it. <br> - The server notice (https://ftp.ncbi.nlm.nih.gov/README.ftp) agrees: "ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
+| Licence (RDF Portal) | https://www.ncbi.nlm.nih.gov/home/about/policies/ (on <https://rdfportal.org/dataset/ncbigene/>). RDF Portal's page gives a URL (NCBI's policies page, read 2026-11-18: see licence_quote), not a licence name. |
+| Redistributable | yes: NCBI places no restrictions on use or distribution of its molecular data; third-party claims on single records are the submitters' (NCBI cannot grant them). |
 | Replaces stock source | ncbi-gene |
 
 ## This build

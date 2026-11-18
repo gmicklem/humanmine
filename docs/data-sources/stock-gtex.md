@@ -7,12 +7,13 @@
 | Data source | GTEx portal ([home page](https://www.gtexportal.org/home/)) |
 | Loader | [humanmine-bio-sources `gtex`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/gtex) at d67fc5d (GtexConverter); source type `gtex` |
 | Data sets in the mine | RNA-Seq Data, Single-Tissue cis-eQTL Data |
-| Licence | not verified |
-| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
-| Licence stated at | <https://storage.googleapis.com/adult-gtex/> |
+| Licence | GTEx Portal Data License (acknowledge; no endorsement; currency statement) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.gtexportal.org/home/license> |
 | Licence read on | 2026-11-18 (UTC) |
-| Conditions | - Looked at: the file's GCT header (no licence), the bucket listing of adult-gtex (README files exist for other versions and for eQTL data, none for bulk-gex/v8/rna-seq). <br> - The GTEx portal's licence page (https://www.gtexportal.org/home/license) answered HTTP 403, Approval required for www.gtexportal.org. <br> - The earlier record ("open-access summary data") is not confirmed. |
-| Redistributable | yes: Unverified. Flag kept; hold publication of stock-gtex until gtexportal.org is read. |
+| Licence wording | "Users who republish or redistribute the data (services, products or raw data) agree to: maintain the most current version of all distributed data, or make known in a clear and conspicuous manner that the products/services/applications do not reflect the most current/accurate data available from the GTEx Portal." |
+| Conditions | - Acknowledge the GTEx Portal as the source with the phrase "The data used for the analyses described in this manuscript were obtained from: [insert, where appropriate] the GTEx Portal on MM/DD/YY and/or dbGaP accession number phs000424.vN.pN on MM/DD/YYYY." "in a clear and conspicuous manner". <br> - Do not indicate or imply that the GTEx Portal has endorsed the products, services or applications. <br> - A copy of the v8 median-TPM file must say clearly that it may not reflect the most current data (GTEx has later releases than v8), unless it is kept current. <br> - "No charges, usage fees or royalties are paid to the GTEx Portal for this data." No warranties; users hold the GTEx Project, the Broad Institute and the U.S. Government harmless. The page is a JavaScript page, read in a browser; the data file's header and the bucket carry no licence text. |
+| Redistributable | yes: The licence allows redistribution if the data are acknowledged and the currency statement is shown. |
 | Download (median) | <https://storage.googleapis.com/adult-gtex/bulk-gex/v8/rna-seq/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_median_tpm.gct.gz> |
 
 ## This build

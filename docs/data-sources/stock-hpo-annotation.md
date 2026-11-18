@@ -7,13 +7,13 @@
 | Data source | Human Phenotype Ontology ([home page](https://hpo.jax.org/app/)) |
 | Loader | [humanmine-bio-sources `hpo-annotation`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/hpo-annotation) at d67fc5d (HpoConverter); source type `hpo-annotation` |
 | Data sets in the mine | hpo-annotation |
-| Licence | not verified (points to https://hpo.jax.org/app/license) |
-| Licence status | not verified: the source points to a page that could not be read |
-| Licence stated at | <https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/README.md> |
+| Licence | HPO licence (acknowledge and cite; show file dates or versions; content and relationships not to be altered) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://hpo.jax.org/license> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "See license information and instructions how to cite the HPO project (https://hpo.jax.org/app/license)" |
-| Conditions | - The annotation files (phenotype.hpoa, genes_to_phenotype.txt) have no licence line; hp.obo's header says "terms:license https://hpo.jax.org/app/license"; the repository's LICENSE.md is the same one-line pointer. <br> - That page (hpo.jax.org) answered HTTP 403, Approval required for hpo.jax.org, so the terms themselves were not read. The earlier record ("reuse with attribution, terms not to be altered") is not confirmed. |
-| Redistributable | yes: Unverified: the terms are on a blocked page. Flag kept; hold publication of stock-hpo-annotation and the hpo RDF group until read. |
+| Licence wording | "The HPO vocabularies, annotation files, tools and documentation are freely available." |
+| Conditions | - "anyone can download the HPO and use the ontologies or other HPO files under three conditions: That the Human Phenotype Ontology Consortium is acknowledged and cited properly. That any HPO Consortium file(s) displayed publicly include the date(s) and/or version number(s) of the relevant HPO file(s). That neither the content of the HPO file(s) nor the logical relationships embedded within the HPO file(s) be altered in any way. (Content additions and modifications have to be suggested using our issue tracker.)" <br> - "Users of the HPO should add the following statement to their online presence. This service/product uses the Human Phenotype Ontology (version information). Find out more at http://www.human-phenotype-ontology.org We request that the HPO logo be included as well." <br> - The HPO is copyrighted "to protect the integrity of the vocabularies, which means that changes to the HPO vocabularies need to be done by HPO developers". A copy that leaves rows out (the gene-panel cut of the annotation files) or re-writes the ontology as tables is not an alteration of any row or relationship, but the licence does not say so: this is a reading, for the project owner to accept or to put to the HPO team. <br> - The page is a JavaScript page; its text was read in a browser (hpo.jax.org/app/license redirects to hpo.jax.org/license). |
+| Redistributable | yes: Redistribution is allowed under the three conditions; a row-subset copy is a reading of 'not altered' that the project owner should accept (or confirm with the HPO team) before the group is published. |
 | Download (genes-to-phenotype) | <https://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt> |
 | Download (hpoa) | <https://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa> |
 

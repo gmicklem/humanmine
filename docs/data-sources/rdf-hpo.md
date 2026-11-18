@@ -9,14 +9,14 @@
 | Data set in the mine | Human Phenotype Ontology (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/ontology/hp |
-| Licence (upstream) | not verified (points to https://hpo.jax.org/app/license) |
-| Licence status | not verified: the source points to a page that could not be read |
-| Licence stated at | <http://purl.obolibrary.org/obo/hp.obo> |
+| Licence (upstream) | HPO licence (acknowledge and cite; show file dates or versions; content and relationships not to be altered) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://hpo.jax.org/license> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "property_value: terms:license https://hpo.jax.org/app/license" |
-| Conditions | - Stated in the header of hp.obo as a pointer; the repository README says the same. The page (hpo.jax.org) answered HTTP 403, Approval required for hpo.jax.org. |
+| Licence wording | "The HPO vocabularies, annotation files, tools and documentation are freely available." |
+| Conditions | - "anyone can download the HPO and use the ontologies or other HPO files under three conditions: That the Human Phenotype Ontology Consortium is acknowledged and cited properly. That any HPO Consortium file(s) displayed publicly include the date(s) and/or version number(s) of the relevant HPO file(s). That neither the content of the HPO file(s) nor the logical relationships embedded within the HPO file(s) be altered in any way. (Content additions and modifications have to be suggested using our issue tracker.)" <br> - "Users of the HPO should add the following statement to their online presence. This service/product uses the Human Phenotype Ontology (version information). Find out more at http://www.human-phenotype-ontology.org We request that the HPO logo be included as well." <br> - The HPO is copyrighted "to protect the integrity of the vocabularies, which means that changes to the HPO vocabularies need to be done by HPO developers". A copy that leaves rows out (the gene-panel cut of the annotation files) or re-writes the ontology as tables is not an alteration of any row or relationship, but the licence does not say so: this is a reading, for the project owner to accept or to put to the HPO team. <br> - The page is a JavaScript page; its text was read in a browser (hpo.jax.org/app/license redirects to hpo.jax.org/license). <br> - hp.obo's header points to https://hpo.jax.org/app/license, which is this page. |
 | Licence (RDF Portal) | RDF Portal has no data set page for HPO (rdfportal.org/dataset/hpo answers 404). |
-| Redistributable | yes: Unverified. Already inside the published demo-data asset (group hpo); re-check once hpo.jax.org is read. |
+| Redistributable | yes: Redistribution is allowed under the three conditions. The cached hpo group is the whole ontology re-written as six tables (terms, alternative ids, synonyms, SNOMED CT cross-references, superclasses) with nothing left out or changed, which is a reading of 'not altered' the project owner should accept (or confirm with the HPO team). |
 | Replaces stock source | hpo |
 
 ## This build

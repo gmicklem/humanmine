@@ -7,13 +7,13 @@
 | Data source | GO Annotation ([home page](http://geneontology.org/)) |
 | Loader | [intermine `bio/sources/go-annotation`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/go-annotation) at 5351d0c301 (GoConverter, GoPostprocess); source type `go-annotation` |
 | Data sets in the mine | GO Annotation data set |
-| Licence | GOA copyright notice (free redistribution with the notice) |
-| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
-| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/README> |
+| Licence | CC-BY-4.0 (GO Consortium); EMBL-EBI GOA copyright notice for the GOA files |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://geneontology.org/docs/go-citation-policy/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "This README and the accompanying databases may be copied and redistributed freely, without advance permission, provided that this copyright statement is reproduced with each copy." |
-| Conditions | - Reproduce the notice with each copy: "GOA - GO Annotation. Copyright 2018 (C) The European Bioinformatics Institute." <br> - The GAF itself (current.geneontology.org/annotations/goa_human.gaf.gz) carries no licence line in its header. The GO Consortium states CC BY 4.0 for the ontology (go-basic.obo: "terms:license http://creativecommons.org/licenses/by/4.0/"), but its licence and citation page (geneontology.org) is blocked from the sandbox, so the licence of the annotation file is not confirmed there. |
-| Redistributable | yes: The EBI GOA README allows free redistribution if its copyright statement travels with the copy; keep the notice file in any release asset. The GO Consortium page was not readable. |
+| Licence wording | "Gene Ontology Consortium data and data products are licensed under the Creative Commons Attribution 4.0 Unported License." |
+| Conditions | - CC BY 4.0 attribution as the GO page spells it out: identify the creator (Gene Ontology Consortium), give a copyright notice, a notice that refers to the licence and to the disclaimer of warranties, and a link. Its example: "Gene Ontology data from the 2024-01-17 release ( DOI:10.5281/zenodo.10536401 ) is made available under the terms of the CC BY 4.0 license." <br> - "We ask that when using or citing GO data that the particular release is mentioned" (date, optionally the Zenodo DOI). In publications cite Ashburner et al., Nat Genet 2000;25:25-9 and The Gene Ontology Consortium, The Gene Ontology knowledgebase in 2026, Nucleic Acids Res 2025 (doi 10.1093/nar/gkaf1292). <br> - The EMBL-EBI GOA README (https://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/README) adds: "This README and the accompanying databases may be copied and redistributed freely, without advance permission, provided that this copyright statement is reproduced with each copy." Reproduce "GOA - GO Annotation. Copyright 2018 (C) The European Bioinformatics Institute." The GAF itself (current.geneontology.org/annotations/goa_human.gaf.gz) carries no licence line; the GO page covers it as a GO data product. |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution; keep the GOA copyright statement with the copy too. |
 | Download (gaf) | <https://current.geneontology.org/annotations/goa_human.gaf.gz> |
 
 ## This build
@@ -57,7 +57,7 @@ n in the status column = records of the whole upstream file that carry the field
 | `col:5` | GO ID | the GO term identifier | GOTerm.identifier, GOAnnotation.ontologyTerm | **loaded** (906,445) | A GOTerm item with identifier only (and dataSets); names and the rest come from the go source (rdfc2im's go source in this build). | 9,121 |
 | `col:6` | DB:Reference(s) | pipe-separated references (PMID:n, GO_REF:n, Reactome:..., ...) | Publication.pubMedId, GOEvidence.publications, Publication.crossReferences, DatabaseReference.identifier, DatabaseReference.source | **loaded** (906,445) | A PMID:n with an all-digit n makes a Publication (pubMedId n), linked from GOEvidence.publications. ... | 9,121 |
 | `col:7` | Evidence Code | GO evidence code (IDA, IPI, IEA, ...) | GOEvidence.code | **loaded** (906,445) | GOEvidence.code references a GOEvidenceCode item; those are made from the bundled go-evidence-codes file (code, name, url), not from the GAF ... | 9,121 |
-| `col:8` | With (or) From | identifiers supporting the evidence (UniProtKB:P12345, ...) | GOEvidence.withText | **loaded** (592,504) | Stored as text. The converter also tries to make GOEvidence.with objects, but only for the prefixes 'UniProt' (Protein) and 'FB' (Gene, fly only); ... | 4,834 |
+| `col:8` | With (or) From | identifiers supporting the evidence (UniProtKB:P12345, ...) | GOEvidence.withText, GOEvidence.with, Protein.primaryAccession | **loaded** (592,504) | Stored as text (GOEvidence.withText), and as objects: both the 'UniProt:' and the 'UniProtKB:' prefix make a "with" Protein (keyed by primaryAccession alone, ... | 4,834 |
 | `col:9` | Aspect | GO aspect (P, F or C) |  | **not loaded** (906,445) | not read (the namespace comes with the GO term from the go source) | 9,121 |
 | `col:10` | DB Object Name | name of the gene product |  | **not loaded** (906,445) | not read | 9,121 |
 | `col:11` | DB Object Synonym | pipe-separated synonyms of the gene product |  | **not loaded** (868,019) | not read | 9,121 |

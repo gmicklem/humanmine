@@ -9,13 +9,14 @@
 | Data set in the mine | HGNC identifiers (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/dataset/hgnc |
-| Licence (upstream) | not verified |
-| Licence status | not verified: the source points to a page that could not be read |
-| Licence stated at | <https://rdfportal.org/dataset/hgnc/> |
+| Licence (upstream) | CC0-1.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.genenames.org/about/license/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Conditions | - HGNC's own page (https://www.genenames.org/about/) answered HTTP 403, Approval required for www.genenames.org; no other route to the statement was found (the EBI mirror path for HGNC is not on the FTP server). |
-| Licence (RDF Portal) | https://www.genenames.org/about/ (on <https://rdfportal.org/dataset/hgnc/>). RDF Portal's page gives HGNC's about page as the licence. |
-| Redistributable | yes: Unverified. Already inside the published demo-data asset; re-check once www.genenames.org is read. |
+| Licence wording | "all data is released under the Creative Commons Public Domain (CC0) License. This means that any form of reuse of the content is permitted." |
+| Conditions | - "Although stating the source is not mandatory, the HGNC recommends attribution (e.g. in publications, services or products)". Recommended citation: Seal RL et al., Genenames.org: the HGNC and PGNC resources in 2026, Nucleic Acids Research (Database issue); or by RRID: HGNC (RRID:SCR_002827). |
+| Licence (RDF Portal) | https://www.genenames.org/about/ (on <https://rdfportal.org/dataset/hgnc/>). RDF Portal's page gives HGNC's about page as the licence; HGNC's licence page (read 2026-11-18) states CC0, the same as the upstream record. |
+| Redistributable | yes: CC0 allows redistribution without conditions. |
 | Replaces stock source | hgnc |
 
 ## This build

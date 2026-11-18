@@ -10,11 +10,11 @@
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/ontology/go |
 | Licence (upstream) | CC-BY-4.0 |
-| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
-| Licence stated at | <https://current.geneontology.org/ontology/go-basic.obo> |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://geneontology.org/docs/go-citation-policy/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "property_value: terms:license http://creativecommons.org/licenses/by/4.0/" |
-| Conditions | - Stated in the header of go-basic.obo (the ontology). The GO Consortium licence page (geneontology.org) is blocked, so the wording on citation was not read. <br> - Attribution to the Gene Ontology Consortium. |
+| Licence wording | "Gene Ontology Consortium data and data products are licensed under the Creative Commons Attribution 4.0 Unported License." |
+| Conditions | - CC BY 4.0 attribution as the GO page spells it out: identify the creator (Gene Ontology Consortium), give a copyright notice, a notice that refers to the licence and to the disclaimer of warranties, and a link. Its example: "Gene Ontology data from the 2024-01-17 release ( DOI:10.5281/zenodo.10536401 ) is made available under the terms of the CC BY 4.0 license." <br> - "We ask that when using or citing GO data that the particular release is mentioned" (date, optionally the Zenodo DOI). In publications cite Ashburner et al., Nat Genet 2000;25:25-9 and The Gene Ontology Consortium, The Gene Ontology knowledgebase in 2026, Nucleic Acids Res 2025 (doi 10.1093/nar/gkaf1292). <br> - The ontology file go-basic.obo says the same in its header: "property_value: terms:license http://creativecommons.org/licenses/by/4.0/" (https://current.geneontology.org/ontology/go-basic.obo). |
 | Licence (RDF Portal) | RDF Portal has no data set page for GO (rdfportal.org/dataset/go and /ontology/go answer 404). |
 | Redistributable | yes: CC BY 4.0 allows redistribution with attribution. |
 | Replaces stock source | go |

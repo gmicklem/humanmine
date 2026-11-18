@@ -14,7 +14,7 @@
 | Licence stated at | <https://www.ebi.ac.uk/gwas/docs/about> |
 | Licence read on | 2026-11-18 (UTC) |
 | Licence wording | "The NHGRI-EBI GWAS Catalog and all its contents are available under the general Terms of Use for EMBL-EBI Services. Summary statistics are made available under CC0 unless otherwise stated." |
-| Conditions | - This build reads the associations through TogoVar's SPARQL endpoint; TogoVar's own terms (https://togovar.org/) answered HTTP 403, Approval required for togovar.org. <br> - Cite the GWAS Catalog (citation page linked from the about page). |
+| Conditions | - This build reads the associations through TogoVar's SPARQL endpoint. TogoVar's own terms (https://togovar.org/doc/terms) sit behind a Cloudflare bot check ("Just a moment" to a plain client, "Performing security verification" to a browser, 2026-11-18, second pass). The proxy allows the host; the site refuses automated readers, and the check was not worked around. A person can read the page in an ordinary browser. <br> - Cite the GWAS Catalog (citation page linked from the about page). |
 | Licence (RDF Portal) | RDF Portal lists no data set page for this source (rdfportal.org/dataset/gwas_catalog answers 404). |
 | Redistributable | yes: EMBL-EBI adds no restriction beyond the data owner's; TogoVar's terms are unread, so partial. |
 | Replaces stock source | huge-gwas |

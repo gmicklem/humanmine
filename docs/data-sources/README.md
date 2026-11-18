@@ -16,34 +16,34 @@ What each source of this hybrid HumanMine build loaded, from which file and rele
 
 | Source | Data source | Release / date | Fetched (UTC) | Scope | Fields loaded / not loaded / unknown | Licence |
 |---|---|---|---|---|---|---|
-| [go (RDF)](rdf-go.md) | GO | not stated | 2026-09-21 | the whole data set (not gene-shaped: no gene filter) | 7 / 2 / 0 | CC-BY-4.0 [partial] |
-| [ncbigene (RDF)](rdf-ncbigene.md) | NCBI | not stated | 2026-11-18 | all human genes of the types the stock NCBI loader keeps (63,649 genes in the items file), as identifiers | 12 / 6 / 0 | NCBI FTP notice: unrestricted public data (no licence named) [partial] |
+| [go (RDF)](rdf-go.md) | GO | not stated | 2026-09-21 | the whole data set (not gene-shaped: no gene filter) | 7 / 2 / 0 | CC-BY-4.0 |
+| [ncbigene (RDF)](rdf-ncbigene.md) | NCBI | not stated | 2026-11-18 | all human genes of the types the stock NCBI loader keeps (63,649 genes in the items file), as identifiers | 12 / 6 / 0 | No restrictions by NCBI (NCBI data-use policy; no licence named) |
 | [reactome (RDF)](rdf-reactome.md) | Reactome | not stated | 2026-09-21 | the whole data set for human (no gene filter) | 21 / 381 / 0 | CC0-1.0 |
-| [hgnc (RDF)](rdf-hgnc.md) | HGNC | not stated | 2026-11-18 | all human genes of the types the stock NCBI loader keeps (44,413 genes in the items file), as identifiers | 20 / 19 / 0 | not verified [not-verified] |
+| [hgnc (RDF)](rdf-hgnc.md) | HGNC | not stated | 2026-11-18 | all human genes of the types the stock NCBI loader keeps (44,413 genes in the items file), as identifiers | 20 / 19 / 0 | CC0-1.0 |
 | [ensembl (RDF)](rdf-ensembl.md) | Ensembl | not stated | 2026-11-18 | 114-gene panel, deep annotation | 8 / 6 / 0 | not verified [not-verified] |
 | [uniprot (RDF)](rdf-uniprot.md) | UniProt | not stated | 2026-11-18 | 114-gene panel, deep annotation | 25 / 517 / 0 | CC-BY-4.0 |
-| [clinvar (RDF)](rdf-clinvar.md) | ClinVar | not stated | 2026-11-18 | 114-gene panel, deep annotation | 12 / 67 / 0 | NCBI FTP notice: unrestricted public data (no licence named) [partial] |
+| [clinvar (RDF)](rdf-clinvar.md) | ClinVar | not stated | 2026-11-18 | 114-gene panel, deep annotation | 12 / 67 / 0 | No restrictions by NCBI (NCBI data-use policy); ClinVar's own data-use page unread [partial] |
 | [gwascatalog (RDF)](rdf-gwascatalog.md) | GWAS Catalog | not stated | 2026-11-18 | 114-gene panel, deep annotation | 12 / 35 / 0 | EMBL-EBI terms of use (summary statistics CC0) [partial] |
 | [pubmed (RDF)](rdf-pubmed.md) | PubMed | not stated | 2026-11-18 | the PubMed records the other sources cite | 13 / 27 / 0 | NLM terms and conditions (free; acknowledge NLM) |
-| [hpo (RDF)](rdf-hpo.md) | HPO | not stated | 2026-11-18 | the whole data set (not gene-shaped: no gene filter) | 9 / 3 / 0 | not verified (points to https://hpo.jax.org/app/license) [not-verified] |
+| [hpo (RDF)](rdf-hpo.md) | HPO | not stated | 2026-11-18 | the whole data set (not gene-shaped: no gene filter) | 9 / 3 / 0 | HPO licence (acknowledge and cite; show file dates or versions; content and relationships not to be altered) |
 | [reactome (stock)](stock-reactome.md) | Reactome | not stated | 2026-09-21 | the whole file (no gene filter) | 4 / 2 / 0 | CC0-1.0 |
 | [uniprot (stock)](stock-uniprot.md) | UniProt | Last-Modified 2026-11-04 | 2026-11-18 | 114-gene panel | 34 / 46 / 0 | CC-BY-4.0 |
 | [uniprot-fasta (stock)](stock-uniprot-fasta.md) | UniProt | Last-Modified 2026-11-04 | 2026-11-18 | 114-gene panel | 3 / 7 / 0 | CC-BY-4.0 |
 | [uniprot-keywords (stock)](stock-uniprot-keywords.md) | UniProt | Last-Modified 2026-11-04 | 2026-11-18 | the whole file (no gene filter) | 2 / 5 / 0 | CC-BY-4.0 |
-| [ncbi-gff (stock)](stock-ncbi-gff.md) | NCBI | annotation NCBI RefSeq GCF_000001405.40-RS_2024_08; assembly GRCh38.p14 | 2026-11-18 | 114-gene panel | 13 / 171 / 0 | NCBI FTP notice: unrestricted public data (no licence named) [partial] |
-| [go-annotation (stock)](stock-go-annotation.md) | GO Annotation | date-generated 2026-05-21T08:10 | 2026-11-18 | 114-gene panel | 8 / 9 / 0 | GOA copyright notice (free redistribution with the notice) [partial] |
-| [interpro-go (stock)](stock-interpro-go.md) | InterPro | date 2026/10/30 10:44:45 | 2026-11-18 | the whole file (no gene filter) | 1 / 0 / 0 | not verified [not-stated] |
+| [ncbi-gff (stock)](stock-ncbi-gff.md) | NCBI | annotation NCBI RefSeq GCF_000001405.40-RS_2024_08; assembly GRCh38.p14 | 2026-11-18 | 114-gene panel | 13 / 171 / 0 | No restrictions by NCBI (NCBI data-use policy; no licence named) |
+| [go-annotation (stock)](stock-go-annotation.md) | GO Annotation | date-generated 2026-05-21T08:10 | 2026-11-18 | 114-gene panel | 8 / 9 / 0 | CC-BY-4.0 (GO Consortium); EMBL-EBI GOA copyright notice for the GOA files |
+| [interpro-go (stock)](stock-interpro-go.md) | InterPro | date 2026/10/30 10:44:45 | 2026-11-18 | the whole file (no gene filter) | 1 / 0 / 0 | CC0-1.0 |
 | [panther (stock)](stock-panther.md) | Panther | Last-Modified 2024-04-02 | 2026-11-18 | 114-gene panel | 4 / 1 / 0 | not verified [not-stated] |
 | [mgi-identifiers (stock)](stock-mgi-identifiers.md) | MGI | Last-Modified 2026-11-16 | 2026-11-18 | the partner genes of the 114-gene panel's PANTHER rows | 4 / 8 / 0 | CC-BY-4.0 |
-| [rgd-identifiers (stock)](stock-rgd-identifiers.md) | Rat Genome Database | generated 2026/11/13 | 2026-11-18 | the partner genes of the 114-gene panel's PANTHER rows | 6 / 61 / 0 | not verified [not-stated] |
+| [rgd-identifiers (stock)](stock-rgd-identifiers.md) | Rat Genome Database | generated 2026/11/13 | 2026-11-18 | the partner genes of the 114-gene panel's PANTHER rows | 6 / 61 / 0 | CC-BY-4.0 |
 | [psi-mi-ontology (stock)](stock-psi-mi-ontology.md) | PSI Molecular Interactions | date 15:04:2021 22:57 | 2026-11-18 | the whole file (no gene filter) | 7 / 19 / 1 | CC-BY-4.0 |
-| [psi-intact (stock)](stock-psi-intact.md) | IntAct | releaseDate 2026-10-24+01:00 | 2026-11-18 | 114-gene panel | 21 / 33 / 0 | not verified (EMBL-EBI terms of use apply) [not-stated] |
+| [psi-intact (stock)](stock-psi-intact.md) | IntAct | releaseDate 2026-10-24+01:00 | 2026-11-18 | 114-gene panel | 22 / 32 / 0 | CC-BY-4.0 |
 | [biogrid (stock)](stock-biogrid.md) | BioGRID | release 5.0.263 | 2026-11-18 | 114-gene panel | 13 / 16 / 0 | MIT |
 | [protein-atlas (stock)](stock-protein-atlas.md) | The Human Protein Atlas | Last-Modified 2026-11-10 | 2026-11-18 | 114-gene panel | 7 / 2 / 0 | CC-BY-4.0 |
 | [protein-atlas-rna (stock)](stock-protein-atlas-rna.md) | The Human Protein Atlas | Last-Modified 2026-11-10 | 2026-11-18 | 114-gene panel | 3 / 1 / 0 | CC-BY-4.0 |
-| [gtex (stock)](stock-gtex.md) | GTEx portal | GTEx v8 | 2026-11-18 | 114-gene panel | 55 / 1 / 0 | not verified [not-stated] |
+| [gtex (stock)](stock-gtex.md) | GTEx portal | GTEx v8 | 2026-11-18 | 114-gene panel | 55 / 1 / 0 | GTEx Portal Data License (acknowledge; no endorsement; currency statement) |
 | [atlas-express (stock)](stock-atlas-express.md) | ArrayExpress | Last-Modified 2021-12-14 | 2026-11-18 | 114-gene panel | 17 / 1 / 0 | CC-BY-4.0 |
-| [hpo-annotation (stock)](stock-hpo-annotation.md) | Human Phenotype Ontology | Last-Modified 2026-09-02; version 2026-09-02 | 2026-11-18 | 114-gene panel | 10 / 8 / 0 | not verified (points to https://hpo.jax.org/app/license) [not-verified] |
+| [hpo-annotation (stock)](stock-hpo-annotation.md) | Human Phenotype Ontology | Last-Modified 2026-09-02; version 2026-09-02 | 2026-11-18 | 114-gene panel | 10 / 8 / 0 | HPO licence (acknowledge and cite; show file dates or versions; content and relationships not to be altered) |
 | [orphanet (stock)](stock-orphanet.md) | Orphanet | JDBOR version 1.3.42 / 4.1.8 [2025-03-03]; date 2026-06-23 07:53:50 | 2026-11-18 | the whole file (no gene filter) | 2 / 17 / 0 | CC-BY-4.0 |
 
 ## Compared with public HumanMine

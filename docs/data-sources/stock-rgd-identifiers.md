@@ -7,12 +7,13 @@
 | Data source | Rat Genome Database ([home page](https://rgd.mcw.edu/)) |
 | Loader | [intermine `bio/sources/rgd-identifiers`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/rgd-identifiers) at 5351d0c301 (RgdIdentifiersConverter); source type `rgd-identifiers` |
 | Data sets in the mine | Rat gene identifiers |
-| Licence | not verified |
-| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
-| Licence stated at | <https://download.rgd.mcw.edu/data_release/README.txt> |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://rgd.mcw.edu/wg/disclaimer/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Conditions | - Looked at: GENES_RAT.txt's header block (format and change log only), the README.txt and directory listing of download.rgd.mcw.edu/data_release/: none states a licence or terms. <br> - RGD's licence and citation page (https://rgd.mcw.edu/wg/citing-rgd/) answered HTTP 403, Approval required for rgd.mcw.edu. <br> - The earlier record ("free to use with citation") was HumanMine's wording and is not confirmed. |
-| Redistributable | yes: Unverified (no stated term either way). Flag kept so the build does not break; not in the stock_filtered asset; hold publication until rgd.mcw.edu is read. |
+| Licence wording | "Data in RGD are provided under the terms of the Creative Commons Attribution 4.0 International (CC BY 4.0) license." |
+| Conditions | - CC BY 4.0: "You must give appropriate credit, provide a link to the license, and indicate if changes were made." The footer of every RGD page links the licence ("License CC BY 4.0", https://creativecommons.org/licenses/by/4.0/). <br> - Citation RGD asks for (https://rgd.mcw.edu/wg/citing-rgd/): "RGD [species and datatype] Download file, Rat Genome Database Web Site, Medical College of Wisconsin, Milwaukee, Wisconsin. World Wide Web (URL: http://rgd.mcw.edu/). [Type in date (month, yr) when you retrieved data cited]." For RGD itself: Rat Genome Database (RGD) (RRID:SCR_006444), and the general citation Vedi M et al., Genetics 2023, PMID 36930729. <br> - The data file (GENES_RAT.txt) and the download host's README carry no licence text; the statement is on RGD's web pages. |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution. |
 | Download (genes) | <https://download.rgd.mcw.edu/data_release/GENES_RAT.txt> |
 
 ## This build

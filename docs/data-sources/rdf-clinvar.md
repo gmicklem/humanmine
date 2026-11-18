@@ -9,14 +9,14 @@
 | Data set in the mine | ClinVar (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/ncbi/sparql> |
 | Graphs | http://rdfportal.org/dataset/clinvar |
-| Licence (upstream) | NCBI FTP notice: unrestricted public data (no licence named) |
+| Licence (upstream) | No restrictions by NCBI (NCBI data-use policy); ClinVar's own data-use page unread |
 | Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
-| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/README.ftp> |
+| Licence stated at | <https://www.ncbi.nlm.nih.gov/home/about/policies/> |
 | Licence read on | 2026-11-18 (UTC) |
-| Licence wording | "NOTE: ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
-| Conditions | - The notice names no licence and asks for no attribution. NCBI's own data-use policy page (https://www.ncbi.nlm.nih.gov/home/about/policies/) is on a host the sandbox blocks, so its wording on attribution and on third-party rights in some records was not read. <br> - ClinVar's own data-use page (https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/, the one RDF Portal names) is on the same blocked host; the ClinVar FTP README states no licence. |
-| Licence (RDF Portal) | https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ (on <https://rdfportal.org/dataset/clinvar/>). RDF Portal's page gives ClinVar's data-use page (blocked here) as the licence. |
-| Redistributable | yes: The server notice says the data are unrestricted; ClinVar's page was not readable. |
+| Licence wording | "NCBI itself places no restrictions on the use or distribution of the data contained therein." |
+| Conditions | - No licence is named and NCBI asks for no attribution for the data. The policy (Molecular Data Usage) adds: "some submitters of the original data (or the country of origin of such data) may claim patent, copyright, or other intellectual property rights in all or a portion of the data"; NCBI "cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases". <br> - For NCBI's own web pages (public domain): "it is requested that in any subsequent use of this work, NLM be given appropriate acknowledgment". Giving that acknowledgement is cheap and the notice files do it. <br> - The server notice (https://ftp.ncbi.nlm.nih.gov/README.ftp) agrees: "ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." <br> - ClinVar's own data-use page (https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/, the one RDF Portal names) was not read: the host answered with a reCAPTCHA page to a plain client and "Checking your browser before accessing www.ncbi.nlm.nih.gov" to a browser. That is NCBI's bot check, not the sandbox policy, and was not worked around. The ClinVar FTP README (https://ftp.ncbi.nlm.nih.gov/pub/clinvar/README.txt) states no licence. |
+| Licence (RDF Portal) | https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ (on <https://rdfportal.org/dataset/clinvar/>). RDF Portal's page gives ClinVar's data-use page as the licence; NCBI's bot check stopped a read of that page on 2026-11-18. |
+| Redistributable | yes: NCBI's general policy places no restrictions on molecular data; ClinVar's own page, which may add a submitter notice, was not readable. |
 | Replaces stock source | clinvar |
 
 ## This build
