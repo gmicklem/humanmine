@@ -7,8 +7,12 @@
 | Data source | Rat Genome Database ([home page](https://rgd.mcw.edu/)) |
 | Loader | [intermine `bio/sources/rgd-identifiers`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/rgd-identifiers) at 5351d0c301 (RgdIdentifiersConverter); source type `rgd-identifiers` |
 | Data sets in the mine | Rat gene identifiers |
-| Licence | RGD data are free to use with citation (Rat Genome Database; wording as HumanMine records it, the RGD site's own licence page was not readable from the build sandbox, so unverified) |
-| Redistributable | yes |
+| Licence | not verified |
+| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
+| Licence stated at | <https://download.rgd.mcw.edu/data_release/README.txt> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - Looked at: GENES_RAT.txt's header block (format and change log only), the README.txt and directory listing of download.rgd.mcw.edu/data_release/: none states a licence or terms. <br> - RGD's licence and citation page (https://rgd.mcw.edu/wg/citing-rgd/) answered HTTP 403, Approval required for rgd.mcw.edu. <br> - The earlier record ("free to use with citation") was HumanMine's wording and is not confirmed. |
+| Redistributable | yes: Unverified (no stated term either way). Flag kept so the build does not break; not in the stock_filtered asset; hold publication until rgd.mcw.edu is read. |
 | Download (genes) | <https://download.rgd.mcw.edu/data_release/GENES_RAT.txt> |
 
 ## This build

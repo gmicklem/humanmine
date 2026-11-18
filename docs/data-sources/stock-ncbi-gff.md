@@ -7,8 +7,13 @@
 | Data source | NCBI ([home page](https://www.ncbi.nlm.nih.gov)) |
 | Loader | [intermine `bio/sources/ncbi-gff`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/ncbi-gff) at 5351d0c301 (NcbiGffGFF3RecordHandler, NcbiGffGFF3SeqHandler, GFF3Converter, GFF3RecordHandler, GFF3SeqHandler, GFF3Record, GFF3ConverterTask); source type `ncbi-gff` |
 | Data sets in the mine | ncbi-gff |
-| Licence | public domain (NCBI RefSeq) |
-| Redistributable | yes |
+| Licence | NCBI FTP notice: unrestricted public data (no licence named) |
+| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
+| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/README.ftp> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "NOTE: ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
+| Conditions | - The notice names no licence and asks for no attribution. NCBI's own data-use policy page (https://www.ncbi.nlm.nih.gov/home/about/policies/) is on a host the sandbox blocks, so its wording on attribution and on third-party rights in some records was not read. |
+| Redistributable | yes: The server notice says the data are unrestricted; the policy page was not readable. |
 | Download (gff) | <https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_genomic.gff.gz> |
 
 ## This build

@@ -9,8 +9,14 @@
 | Data set in the mine | Reactome pathways data set |
 | SPARQL endpoint | <https://rdfportal.org/ebi/sparql> |
 | Graphs | http://rdf.ebi.ac.uk/dataset/reactome |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | CC0-1.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://reactome.org/license> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "All data in the Reactome database and files derived from that data are licensed under the Creative Commons Public Domain Dedication (CC0)." |
+| Conditions | - Attribution encouraged, not required. Reactome's pathway illustrations, icons and branding are CC BY 4.0 and its software Apache-2.0 (not used). |
+| Licence (RDF Portal) | Creative Commons Public Domain (CC0) License (on <https://rdfportal.org/dataset/reactome/>). Same as upstream. |
+| Redistributable | yes: CC0 allows redistribution without conditions. |
 | Loaded beside stock source | reactome |
 
 ## This build

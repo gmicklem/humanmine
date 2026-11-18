@@ -7,8 +7,13 @@
 | Data source | UniProt ([home page](https://www.uniprot.org/)) |
 | Loader | [intermine `bio/sources/uniprot-keywords`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/uniprot-keywords) at 5351d0c301 (UniprotKeywordConverter); source type `uniprot-keywords` |
 | Data sets in the mine | UniProt data set |
-| Licence | CC BY 4.0 (UniProt) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "We have chosen to apply the Creative Commons Attribution 4.0 International (CC BY 4.0) License (https://creativecommons.org/licenses/by/4.0/) to all copyrightable parts of our databases." |
+| Conditions | - Attribution: credit the UniProt Consortium and say that the data were changed (this build keeps human Swiss-Prot entries, cut to the gene panel). <br> - The README adds: some data may be covered by patents or other rights, and medical or genetic information is for research, educational and informational purposes only. <br> - keywlist.xml has no <copyright> element of its own; the statement is the README of the same release tree. |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution (the file is used whole). |
 | Download (keywlist) | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/docs/keywlist.xml.gz> |
 
 ## This build

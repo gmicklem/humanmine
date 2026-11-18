@@ -9,8 +9,14 @@
 | Data set in the mine | UniProtKB, Swiss-Prot and TrEMBL (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/sib/sparql> |
 | Graphs | http://sparql.uniprot.org/citationmapping, http://sparql.uniprot.org/citations, http://sparql.uniprot.org/core, http://sparql.uniprot.org/databases, http://sparql.uniprot.org/diseases, http://sparql.uniprot.org/enzyme, http://sparql.uniprot.org/go, http://sparql.uniprot.org/journal, http://sparql.uniprot.org/keywords, http://sparql.uniprot.org/locations, http://sparql.uniprot.org/obsolete, http://sparql.uniprot.org/pathways, http://sparql.uniprot.org/proteomes, http://sparql.uniprot.org/taxonomy, http://sparql.uniprot.org/tissues, http://sparql.uniprot.org/uniprot |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "We have chosen to apply the Creative Commons Attribution 4.0 International (CC BY 4.0) License (https://creativecommons.org/licenses/by/4.0/) to all copyrightable parts of our databases." |
+| Conditions | - Attribution: credit the UniProt Consortium and say that the data were changed (this build keeps human Swiss-Prot entries, cut to the gene panel). <br> - The README adds: some data may be covered by patents or other rights, and medical or genetic information is for research, educational and informational purposes only. |
+| Licence (RDF Portal) | Creative Commons Attribution 4.0 International (CC BY 4.0) License (on <https://rdfportal.org/dataset/uniprot/>). Same as upstream. |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution. |
 | Loaded beside stock source | uniprot |
 
 ## This build

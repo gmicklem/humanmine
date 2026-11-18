@@ -7,8 +7,13 @@
 | Data source | UniProt ([home page](https://www.uniprot.org/)) |
 | Loader | [intermine `bio/sources/fasta`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/fasta) at 5351d0c301 (UniProtFastaLoaderTask, FastaLoaderTask); source type `fasta` |
 | Data sets in the mine | uniprot-fasta |
-| Licence | CC BY 4.0 (UniProt) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "We have chosen to apply the Creative Commons Attribution 4.0 International (CC BY 4.0) License (https://creativecommons.org/licenses/by/4.0/) to all copyrightable parts of our databases." |
+| Conditions | - Attribution: credit the UniProt Consortium and say that the data were changed (this build keeps human Swiss-Prot entries, cut to the gene panel). <br> - The README adds: some data may be covered by patents or other rights, and medical or genetic information is for research, educational and informational purposes only. <br> - The FASTA file has no licence line of its own; the statement is the README of the same release tree. |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution. |
 | Download (varsplic) | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot_varsplic.fasta.gz> |
 
 ## This build

@@ -7,8 +7,13 @@
 | Data source | ArrayExpress ([home page](http://www.ebi.ac.uk/arrayexpress/)) |
 | Loader | [humanmine-bio-sources `atlas-express`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/atlas-express) at d67fc5d (AtlasExpressConverter); source type `atlas-express` |
 | Data sets in the mine | atlas-express |
-| Licence | CC BY 4.0 (Expression Atlas, EMBL-EBI) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.ebi.ac.uk/gxa/licence.html> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "We are applying the Creative Commons Attribution 4.0 International License for all copyrightable material on our website." |
+| Conditions | - Credit by citing: "Expression Atlas in 2026: enabling FAIR and open expression data through community collaboration and integration (Nucleic Acids Research, 10 December 2025)". <br> - The page is about the Atlas's own material; E-MTAB-513 is a submitted experiment, and the EMBL-EBI terms say EMBL-EBI adds no restriction beyond the data owner's. |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution. |
 | Download (fpkms) | <https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/E-MTAB-513/E-MTAB-513-fpkms.tsv> |
 
 ## This build

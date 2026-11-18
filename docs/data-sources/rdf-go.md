@@ -9,8 +9,14 @@
 | Data set in the mine | GO (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/ontology/go |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | CC-BY-4.0 |
+| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
+| Licence stated at | <https://current.geneontology.org/ontology/go-basic.obo> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "property_value: terms:license http://creativecommons.org/licenses/by/4.0/" |
+| Conditions | - Stated in the header of go-basic.obo (the ontology). The GO Consortium licence page (geneontology.org) is blocked, so the wording on citation was not read. <br> - Attribution to the Gene Ontology Consortium. |
+| Licence (RDF Portal) | RDF Portal has no data set page for GO (rdfportal.org/dataset/go and /ontology/go answer 404). |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution. |
 | Replaces stock source | go |
 
 ## This build

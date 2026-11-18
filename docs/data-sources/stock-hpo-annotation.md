@@ -7,8 +7,13 @@
 | Data source | Human Phenotype Ontology ([home page](https://hpo.jax.org/app/)) |
 | Loader | [humanmine-bio-sources `hpo-annotation`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/hpo-annotation) at d67fc5d (HpoConverter); source type `hpo-annotation` |
 | Data sets in the mine | hpo-annotation |
-| Licence | HPO licence (reuse with attribution, terms not to be altered; unverified for a filtered copy) |
-| Redistributable | yes |
+| Licence | not verified (points to https://hpo.jax.org/app/license) |
+| Licence status | not verified: the source points to a page that could not be read |
+| Licence stated at | <https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/README.md> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "See license information and instructions how to cite the HPO project (https://hpo.jax.org/app/license)" |
+| Conditions | - The annotation files (phenotype.hpoa, genes_to_phenotype.txt) have no licence line; hp.obo's header says "terms:license https://hpo.jax.org/app/license"; the repository's LICENSE.md is the same one-line pointer. <br> - That page (hpo.jax.org) answered HTTP 403, Approval required for hpo.jax.org, so the terms themselves were not read. The earlier record ("reuse with attribution, terms not to be altered") is not confirmed. |
+| Redistributable | yes: Unverified: the terms are on a blocked page. Flag kept; hold publication of stock-hpo-annotation and the hpo RDF group until read. |
 | Download (genes-to-phenotype) | <https://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt> |
 | Download (hpoa) | <https://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa> |
 

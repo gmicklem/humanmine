@@ -7,8 +7,13 @@
 | Data source | BioGRID ([home page](http://www.thebiogrid.org/)) |
 | Loader | [intermine `bio/sources/biogrid`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/biogrid) at 5351d0c301 (BioGridConverter); source type `biogrid` |
 | Data sets in the mine | BioGRID interaction data set |
-| Licence | MIT (BioGRID; unverified) |
-| Redistributable | yes |
+| Licence | MIT |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://downloads.thebiogrid.org/BioGRID/Latest-Release/> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "All data provided are 100% freely available to both academic and commercial users under the MIT License, and are provided WITHOUT ANY WARRANTY." |
+| Conditions | - MIT licence: keep the copyright and permission notice with substantial portions. <br> - Requested, not required: "Publications are requested to please cite the original contributing authors (where applicable) and also: Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. BioGRID: a general repository for interaction datasets. Nucleic Acids Res. 2006; 34:D535-9." <br> - The earlier record (MIT, unverified) is now confirmed. The page links the MIT text; the link was not followed. |
+| Redistributable | yes: MIT allows redistribution of changed copies; keep the notice. |
 | Download (organisms) | <https://downloads.thebiogrid.org/Download/BioGRID/Latest-Release/BIOGRID-ORGANISM-LATEST.psi25.zip> |
 
 ## This build

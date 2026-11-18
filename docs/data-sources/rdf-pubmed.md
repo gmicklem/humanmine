@@ -9,8 +9,14 @@
 | Data set in the mine | PubMed (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/ncbi/sparql> |
 | Graphs | http://rdfportal.org/dataset/pubmed |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | NLM terms and conditions (free; acknowledge NLM) |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/README.txt> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "NLM freely provides PubMed data. Please note some abstracts may be protected by copyright." |
+| Conditions | - Acknowledge NLM as the source "in a clear and conspicuous manner". <br> - Do not use the PubMed wordmark or logo, and do not imply NLM/NIH/HHS endorsement. <br> - Anyone who republishes or redistributes the data must maintain the most current version, or make known in a clear and conspicuous manner that the product does not reflect the most current data from NLM. <br> - Some abstracts may be copyrighted; NLM gives no legal advice on that. |
+| Licence (RDF Portal) | https://www.nlm.nih.gov/databases/download.html (on <https://rdfportal.org/dataset/pubmed/>). RDF Portal's page gives NLM's download page (blocked here) as the licence; the FTP README is the same terms. |
+| Redistributable | yes: Redistribution is allowed on those conditions (the currency notice matters for a frozen cache); abstract copyright is a separate question. |
 
 ## This build
 

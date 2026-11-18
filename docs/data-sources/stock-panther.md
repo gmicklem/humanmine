@@ -7,8 +7,12 @@
 | Data source | Panther ([home page](http://pantherdb.org/)) |
 | Loader | [intermine `bio/sources/panther`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/panther) at 5351d0c301 (PantherConverter); source type `panther` |
 | Data sets in the mine | Panther orthologue and paralogue predictions |
-| Licence | PANTHER terms of use, free with citation (unverified) |
-| Redistributable | yes |
+| Licence | not verified |
+| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
+| Licence stated at | <https://data.pantherdb.org/ftp/ortholog/current_release/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - Looked at: the README beside the download (it describes the files only), the /ftp/, /ftp/ortholog/ and /ftp/downloads/ directory listings and the file's own header: none states a licence or terms. <br> - PANTHER's terms page (https://www.pantherdb.org/tou.jsp) answered HTTP 403, Approval required for www.pantherdb.org. The converter stamps the GPL URL on its data set, which nothing found supports. <br> - The earlier record ("free with citation") was from general knowledge and is not confirmed. |
+| Redistributable | yes: No stated term forbids it and none permits it: unverified. Flag kept so the build does not break; hold publication until pantherdb.org is read. |
 | Download (orthologs) | <https://data.pantherdb.org/ftp/ortholog/current_release/RefGenomeOrthologs.tar.gz> |
 
 ## This build

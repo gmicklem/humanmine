@@ -7,8 +7,13 @@
 | Data source | GO Annotation ([home page](http://geneontology.org/)) |
 | Loader | [intermine `bio/sources/go-annotation`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/go-annotation) at 5351d0c301 (GoConverter, GoPostprocess); source type `go-annotation` |
 | Data sets in the mine | GO Annotation data set |
-| Licence | CC BY 4.0 (GO Consortium, GOA) |
-| Redistributable | yes |
+| Licence | GOA copyright notice (free redistribution with the notice) |
+| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "This README and the accompanying databases may be copied and redistributed freely, without advance permission, provided that this copyright statement is reproduced with each copy." |
+| Conditions | - Reproduce the notice with each copy: "GOA - GO Annotation. Copyright 2018 (C) The European Bioinformatics Institute." <br> - The GAF itself (current.geneontology.org/annotations/goa_human.gaf.gz) carries no licence line in its header. The GO Consortium states CC BY 4.0 for the ontology (go-basic.obo: "terms:license http://creativecommons.org/licenses/by/4.0/"), but its licence and citation page (geneontology.org) is blocked from the sandbox, so the licence of the annotation file is not confirmed there. |
+| Redistributable | yes: The EBI GOA README allows free redistribution if its copyright statement travels with the copy; keep the notice file in any release asset. The GO Consortium page was not readable. |
 | Download (gaf) | <https://current.geneontology.org/annotations/goa_human.gaf.gz> |
 
 ## This build

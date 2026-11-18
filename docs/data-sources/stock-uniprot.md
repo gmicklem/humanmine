@@ -7,8 +7,13 @@
 | Data source | UniProt ([home page](https://www.uniprot.org/)) |
 | Loader | [intermine `bio/sources/uniprot`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/uniprot) at 5351d0c301 (UniprotConverter, UniprotEntry, UniprotConfig); source type `uniprot` |
 | Data sets in the mine | Swiss-Prot data set |
-| Licence | CC BY 4.0 (UniProt) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/README> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "We have chosen to apply the Creative Commons Attribution 4.0 International (CC BY 4.0) License (https://creativecommons.org/licenses/by/4.0/) to all copyrightable parts of our databases." |
+| Conditions | - Attribution: credit the UniProt Consortium and say that the data were changed (this build keeps human Swiss-Prot entries, cut to the gene panel). <br> - The README adds: some data may be covered by patents or other rights, and medical or genetic information is for research, educational and informational purposes only. <br> - The XML file ends with <copyright>: "Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms Distributed under the Creative Commons Attribution (CC BY 4.0) License". |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution. |
 | Download (sprot) | <https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/uniprot_sprot_human.xml.gz> |
 
 ## This build

@@ -7,8 +7,13 @@
 | Data source | PSI Molecular Interactions ([home page](http://www.psidev.info/)) |
 | Loader | [intermine `bio/sources/psi-mi-ontology`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/psi-mi-ontology) at 5351d0c301 (OboConverterTask, OboConverter, OboParser); source type `psi-mi-ontology` |
 | Data sets in the mine | PSI Molecular Interactions |
-| Licence | CC BY 4.0 (HUPO-PSI; unverified) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://raw.githubusercontent.com/HUPO-PSI/psi-mi-CV/master/LICENSE> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "Attribution 4.0 International (the Creative Commons legal text, first line of the repository's LICENSE file)" |
+| Conditions | - The download (purl.obolibrary.org/obo/mi.obo) redirects to psi-mi.obo in this repository; the OBO file has no licence line of its own, so the repository's LICENSE is the statement. <br> - Attribution to HUPO-PSI. |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution. |
 | Download (obo) | <https://purl.obolibrary.org/obo/mi.obo> |
 
 ## This build

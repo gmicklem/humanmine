@@ -7,8 +7,12 @@
 | Data source | GTEx portal ([home page](https://www.gtexportal.org/home/)) |
 | Loader | [humanmine-bio-sources `gtex`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/gtex) at d67fc5d (GtexConverter); source type `gtex` |
 | Data sets in the mine | RNA-Seq Data, Single-Tissue cis-eQTL Data |
-| Licence | GTEx open-access summary data |
-| Redistributable | yes |
+| Licence | not verified |
+| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
+| Licence stated at | <https://storage.googleapis.com/adult-gtex/> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - Looked at: the file's GCT header (no licence), the bucket listing of adult-gtex (README files exist for other versions and for eQTL data, none for bulk-gex/v8/rna-seq). <br> - The GTEx portal's licence page (https://www.gtexportal.org/home/license) answered HTTP 403, Approval required for www.gtexportal.org. <br> - The earlier record ("open-access summary data") is not confirmed. |
+| Redistributable | yes: Unverified. Flag kept; hold publication of stock-gtex until gtexportal.org is read. |
 | Download (median) | <https://storage.googleapis.com/adult-gtex/bulk-gex/v8/rna-seq/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_median_tpm.gct.gz> |
 
 ## This build

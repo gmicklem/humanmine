@@ -7,8 +7,13 @@
 | Data source | The Human Protein Atlas ([home page](https://www.proteinatlas.org/)) |
 | Loader | [humanmine-bio-sources `protein-atlas-rna`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/protein-atlas-rna) at d67fc5d (ProteinAtlasRNAConverter); source type `protein-atlas-rna` |
 | Data sets in the mine | Protein Atlas RNA Gene data |
-| Licence | CC BY-SA 4.0 (Human Protein Atlas; share-alike, the converter's data set still says 3.0) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.proteinatlas.org/about/licence> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "The Human Protein Atlas is licensed under the Creative Commons Attribution 4.0 International License for all copyrightable parts of our database." |
+| Conditions | - Attribution, in the page's own words: include a reference to a primary publication (or one of the other publications it lists) AND a reference to the website ("Human Protein Atlas proteinatlas.org"). <br> - For data downloaded from the site, also cite the data used and its URL: "image/gene/data available from v##.proteinatlas.org" (## = the atlas version). <br> - "Data subject to third-party constraints may also be included and it is the responsibility of users of the Human Protein Atlas to ensure that their utilization of the data does not infringe any of the rights of such third parties." <br> - Not share-alike. The table said CC BY-SA 4.0 until 2026-11-18; the page states CC BY 4.0. |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution; no share-alike duty (corrects the earlier record). |
 | Download (consensus) | <https://www.proteinatlas.org/download/tsv/rna_tissue_consensus.tsv.zip> |
 
 ## This build

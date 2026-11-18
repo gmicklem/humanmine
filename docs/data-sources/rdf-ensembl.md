@@ -9,8 +9,13 @@
 | Data set in the mine | Ensembl genes (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/ebi/sparql> |
 | Graphs | none named (the whole endpoint) |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | not verified |
+| Licence status | not verified: the source points to a page that could not be read |
+| Licence stated at | <https://rdfportal.org/dataset/ensembl/> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - Ensembl's disclaimer page (https://www.ensembl.org/info/about/legal/disclaimer.html) answered HTTP 403, Approval required for www.ensembl.org. |
+| Licence (RDF Portal) | http://ensembl.org/info/about/legal/disclaimer.html (on <https://rdfportal.org/dataset/ensembl/>). RDF Portal's page gives Ensembl's disclaimer page as the licence. |
+| Redistributable | yes: Unverified. Already inside the published demo-data asset; re-check once www.ensembl.org is read. |
 
 ## This build
 

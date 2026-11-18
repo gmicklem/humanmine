@@ -9,8 +9,14 @@
 | Data set in the mine | NCBI Gene (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/ncbi/sparql> |
 | Graphs | http://rdfportal.org/dataset/ncbigene |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | NCBI FTP notice: unrestricted public data (no licence named) |
+| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
+| Licence stated at | <https://ftp.ncbi.nlm.nih.gov/README.ftp> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "NOTE: ALL DATA HERE IS PUBLIC, NON-SENSITIVE, UNRESTRICTED SCIENTIFIC DATA SHARING AMONG SCIENTIFIC COMMUNITIES." |
+| Conditions | - The notice names no licence and asks for no attribution. NCBI's own data-use policy page (https://www.ncbi.nlm.nih.gov/home/about/policies/) is on a host the sandbox blocks, so its wording on attribution and on third-party rights in some records was not read. |
+| Licence (RDF Portal) | https://www.ncbi.nlm.nih.gov/home/about/policies/ (on <https://rdfportal.org/dataset/ncbigene/>). RDF Portal's page gives a URL (NCBI's policies page, which is blocked here), not a licence name. |
+| Redistributable | yes: The server notice says the data are unrestricted; the policy page was not readable. |
 | Replaces stock source | ncbi-gene |
 
 ## This build

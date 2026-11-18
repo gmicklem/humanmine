@@ -7,8 +7,13 @@
 | Data source | Orphanet ([home page](https://www.orpha.net/consor/cgi-bin/index.php)) |
 | Loader | [humanmine-bio-sources `orphanet`](https://github.com/gmicklem/humanmine-bio-sources/tree/d67fc5d/orphanet) at d67fc5d (OrphanetConverter); source type `orphanet` |
 | Data sets in the mine | orphanet |
-| Licence | CC BY 4.0 (Orphanet) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.orphadata.com/legal-notice/> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "Users may download the data made available on www.orphadata.com in the Orphadata Science section and use them as they wish (including use in other information systems) according to the Commons Attribution 4.0 International (CC BY 4.0) licence." |
+| Conditions | - The file itself says so: <Licence> ... <ShortIdentifier>CC-BY-4.0</ShortIdentifier> (en_product1.xml, JDBOR date 2026-06-23). <br> - Cite the provenance: "Orphadata Science: Free access data from Orphanet. (c) INSERM 1999. Available on http://sciences.orphadata.com/. Data version [date]." Indicate changes; do not suggest Orphanet endorses the use; do not use the logos without approval. <br> - AI clause: use of CC BY data in LLM/AI-based tools offered to third parties needs a statement that results may not reflect the Orphanet data (not a mine, but any chat or LLM front end added later). |
+| Redistributable | yes: CC BY 4.0 allows redistribution with attribution (file used whole, unchanged). |
 | Download (product1) | <https://www.orphadata.com/data/xml/en_product1.xml> |
 
 ## This build

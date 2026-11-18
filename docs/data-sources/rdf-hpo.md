@@ -9,8 +9,14 @@
 | Data set in the mine | Human Phenotype Ontology (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/ontology/hp |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | not verified (points to https://hpo.jax.org/app/license) |
+| Licence status | not verified: the source points to a page that could not be read |
+| Licence stated at | <http://purl.obolibrary.org/obo/hp.obo> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "property_value: terms:license https://hpo.jax.org/app/license" |
+| Conditions | - Stated in the header of hp.obo as a pointer; the repository README says the same. The page (hpo.jax.org) answered HTTP 403, Approval required for hpo.jax.org. |
+| Licence (RDF Portal) | RDF Portal has no data set page for HPO (rdfportal.org/dataset/hpo answers 404). |
+| Redistributable | yes: Unverified. Already inside the published demo-data asset (group hpo); re-check once hpo.jax.org is read. |
 | Replaces stock source | hpo |
 
 ## This build

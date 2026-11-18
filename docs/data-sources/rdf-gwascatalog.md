@@ -9,8 +9,14 @@
 | Data set in the mine | GWAS Catalog (TogoVar) |
 | SPARQL endpoint | <https://togovar.org/sparql> |
 | Graphs | none named (the whole endpoint) |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | EMBL-EBI terms of use (summary statistics CC0) |
+| Licence status | partly verified: a related statement was read, the full one was not (see the conditions) |
+| Licence stated at | <https://www.ebi.ac.uk/gwas/docs/about> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "The NHGRI-EBI GWAS Catalog and all its contents are available under the general Terms of Use for EMBL-EBI Services. Summary statistics are made available under CC0 unless otherwise stated." |
+| Conditions | - This build reads the associations through TogoVar's SPARQL endpoint; TogoVar's own terms (https://togovar.org/) answered HTTP 403, Approval required for togovar.org. <br> - Cite the GWAS Catalog (citation page linked from the about page). |
+| Licence (RDF Portal) | RDF Portal lists no data set page for this source (rdfportal.org/dataset/gwas_catalog answers 404). |
+| Redistributable | yes: EMBL-EBI adds no restriction beyond the data owner's; TogoVar's terms are unread, so partial. |
 | Replaces stock source | huge-gwas |
 
 ## This build

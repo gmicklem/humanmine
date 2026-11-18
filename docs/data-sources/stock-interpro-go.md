@@ -7,8 +7,12 @@
 | Data source | InterPro ([home page](https://www.ebi.ac.uk/interpro/)) |
 | Loader | [intermine `bio/sources/interpro-go`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/interpro-go) at 5351d0c301 (InterproGoConverter); source type `interpro-go` |
 | Data sets in the mine | InterPro domain GO annotations |
-| Licence | CC0 (InterPro) |
-| Redistributable | yes |
+| Licence | not verified |
+| Licence status | not stated: nothing findable (see what was looked at, in the conditions) |
+| Licence stated at | <https://ftp.ebi.ac.uk/pub/databases/interpro/current_release/interpro2go> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - Looked at: the file's header (date, description, citation, contact; no licence), release_notes.txt and the FTP listings of ftp.ebi.ac.uk/pub/databases/interpro/: no licence text. <br> - InterPro's licence page (https://www.ebi.ac.uk/interpro/about/) is a JavaScript page: fetched, it holds no text. This is not a blocked host; the page needs a browser. The earlier record (CC0) is not confirmed. <br> - EMBL-EBI terms of use apply meanwhile (https://www.ebi.ac.uk/about/terms-of-use/). |
+| Redistributable | yes: Unverified (3 MB mapping file, used whole). Flag kept; read the page in a browser before publishing. |
 | Download (interpro2go) | <https://ftp.ebi.ac.uk/pub/databases/interpro/current_release/interpro2go> |
 
 ## This build

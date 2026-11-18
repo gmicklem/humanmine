@@ -7,8 +7,13 @@
 | Data source | MGI ([home page](http://www.informatics.jax.org/)) |
 | Loader | [intermine `bio/sources/mgi-identifiers`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/mgi-identifiers) at 5351d0c301 (MgiIdentifiersConverter); source type `mgi-identifiers` |
 | Data sets in the mine | Mouse gene identifiers |
-| Licence | MGI data are free to use with citation (Mouse Genome Informatics) |
-| Redistributable | yes |
+| Licence | CC-BY-4.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://www.informatics.jax.org/mgihome/other/copyright.shtml> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "MGI data and annotations are licensed under a Creative Commons Attribution 4.0 International License (CC-BY)." |
+| Conditions | - Attribution to MGI (Mouse Genome Informatics). <br> - Images on the site are excluded (copyright of the authors); this build uses MRK_List2.rpt only, no images. |
+| Redistributable | yes: CC BY 4.0 allows redistribution of changed copies with attribution. |
 | Download (markers) | <https://www.informatics.jax.org/downloads/reports/MRK_List2.rpt> |
 
 ## This build

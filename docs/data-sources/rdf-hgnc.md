@@ -9,8 +9,13 @@
 | Data set in the mine | HGNC identifiers (RDF Portal) |
 | SPARQL endpoint | <https://rdfportal.org/primary/sparql> |
 | Graphs | http://rdfportal.org/dataset/hgnc |
-| Licence | not recorded in rdfc2im (see the data source's own terms) |
-| Redistributable | the cached extract is published with rdfc2im's raw-data cache |
+| Licence (upstream) | not verified |
+| Licence status | not verified: the source points to a page that could not be read |
+| Licence stated at | <https://rdfportal.org/dataset/hgnc/> |
+| Licence read on | 2026-11-18 (UTC) |
+| Conditions | - HGNC's own page (https://www.genenames.org/about/) answered HTTP 403, Approval required for www.genenames.org; no other route to the statement was found (the EBI mirror path for HGNC is not on the FTP server). |
+| Licence (RDF Portal) | https://www.genenames.org/about/ (on <https://rdfportal.org/dataset/hgnc/>). RDF Portal's page gives HGNC's about page as the licence. |
+| Redistributable | yes: Unverified. Already inside the published demo-data asset; re-check once www.genenames.org is read. |
 | Replaces stock source | hgnc |
 
 ## This build

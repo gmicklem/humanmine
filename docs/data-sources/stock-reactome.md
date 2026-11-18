@@ -7,8 +7,13 @@
 | Data source | Reactome ([home page](http://www.reactome.org/)) |
 | Loader | [intermine `bio/sources/reactome`](https://github.com/intermine/intermine/tree/5351d0c301/bio/sources/reactome) at 5351d0c301 (ReactomeConverter, ReactomePostProcess); source type `reactome` |
 | Data sets in the mine | Reactome pathways data set |
-| Licence | CC0 (Reactome) |
-| Redistributable | yes |
+| Licence | CC0-1.0 |
+| Licence status | verified: stated on the source's own page or file |
+| Licence stated at | <https://reactome.org/license> |
+| Licence read on | 2026-11-18 (UTC) |
+| Licence wording | "All data in the Reactome database and files derived from that data are licensed under the Creative Commons Public Domain Dedication (CC0)." |
+| Conditions | - Attribution encouraged, not required. Reactome's pathway illustrations, icons and branding are CC BY 4.0 and its software Apache-2.0 (neither is used). |
+| Redistributable | yes: CC0 allows redistribution without conditions. |
 | Download (map) | <https://reactome.org/download/current/UniProt2Reactome.txt> |
 
 ## This build
