@@ -45,5 +45,4 @@
 
 <action path="/initFriendlyMineLinkDisplayer" type="org.intermine.bio.web.FriendlyMineLinkController"/>
 
-<action path="/initEsynListDisplayer" type="org.intermine.bio.web.EsynListDisplayer"/>
 
