@@ -95,7 +95,6 @@
     <bagdisplayers>
       <!-- attribute links can now be configured for gene list analysis pages -->
       <displayer src="friendlyMineLinkDisplayer.tile" showOnLeft="false" />
-      <!-- <displayer src="esynListDisplayer.tile" showOnLeft="true" /> -->
     </bagdisplayers>
   </class>
 
@@ -356,13 +355,6 @@
         placement="Genomics"
         types="SequenceFeature"/>
 
-    <!--
-    <reportdisplayer javaClass="org.intermine.bio.web.displayer.EsynDisplayer"
-        jspName="model/esynDisplayer.jsp"
-        replacesFields=""
-        placement="Interactions"
-        types="Gene"/>
--->
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneIdentifiersDisplayer"
                      jspName="model/geneIdentifiersDisplayer.jsp"
                      replacesFields="primaryIdentifier,secondaryIdentifier"
